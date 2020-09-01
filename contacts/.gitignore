@@ -1,0 +1,11 @@
+*.pyc
+/media/
+.db
+__pycache__/
+.idea/
+contacts/*.sqlite3
+contacts/db.sqlite3
+contacts/media
+**/**/migrations
+contacts/settings/local.py
+myenv
