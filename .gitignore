@@ -2,3 +2,5 @@
 myenv
 venv
 env
+*.log
+**/**/**/migrations

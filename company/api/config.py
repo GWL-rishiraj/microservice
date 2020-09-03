@@ -50,7 +50,7 @@ class DevelopmentConfig(Config):
     export POSTGRES_URL="127.0.0.1:5432"
     export POSTGRES_USER="postgres"
     export POSTGRES_PW="redhat"
-    export POSTGRES_DB="fmicro1"
+    export POSTGRES_DB="company_service"
     '''
     POSTGRES_URL = get_env_variable("POSTGRES_URL")
     POSTGRES_USER = get_env_variable("POSTGRES_USER")
@@ -75,7 +75,7 @@ class QAConfig(Config):
     export POSTGRES_URL="127.0.0.1:5432"
     export POSTGRES_USER="postgres"
     export POSTGRES_PW="redhat"
-    export POSTGRES_DB="fmicro1"
+    export POSTGRES_DB="company_service"
     '''
     POSTGRES_URL = get_env_variable("POSTGRES_URL")
     POSTGRES_USER = get_env_variable("POSTGRES_USER")
