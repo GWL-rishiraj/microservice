@@ -1,5 +1,6 @@
 import logging
 from django.conf import settings
+import requests
 
 from django.shortcuts import render
 from rest_framework import viewsets 
@@ -41,3 +42,23 @@ class LogoutView(APIView):
 	def post(self, request):
 		rest_logout(request)
 		return Response(status=204)
+
+
+class FetchCompany(APIView):
+	#permission_classes = (IsAuthenticated,)
+	def get(self, request):
+		# params = {'username': 'testuser'}
+		# params['access_token'] = 'c3NhbmthMDJjsd'
+		# params['region'] = 'test'
+		# params['role'] = 'guide'
+		# params['ipaddr'] = '192.168.0.37'
+		# params['name'] = 'test-testhost-001'
+		# params['check'] = 'enable' 
+		# url = 'http://10.0.0.1:8000/monitor/'
+		# r = requests.post(url, data=params)
+		# r.json()
+		url = 'http://localhost:5000/companies'
+		r = requests.get(url)
+		print(r)
+		print(type(r))
+		return Response(r, status= status.HTTP_200_OK)
